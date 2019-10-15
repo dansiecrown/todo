@@ -1,0 +1,60 @@
+hr {
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+.App {
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  margin-top: 40px ;
+  padding: 15px;
+  /* border-bottom: 4px solid white; */
+  font-family: 'Mansalva', cursive;
+}
+
+.input{
+  font-size: 23px;
+  font-family: 'Grenze', serif;
+  margin-top: 40px;
+}
+
+.item-enter{
+  font-size: 18px;
+  font-family: 'Grenze', serif;
+  text-align: center;
+  width: 6%;
+  height: 30px;
+  background-color: #282c34;
+  outline: none;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.item-enter:focus{
+  width: 80%;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  
+  flex-direction: column;
+  align-items: center;
+  
+  
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
