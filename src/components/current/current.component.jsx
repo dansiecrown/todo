@@ -1,17 +1,37 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faCheckCircle, faTrash } from '@fortawesome/free-solid-svg-icons';
+
 import './current.css';
 
-const Current = () => (
-    <div className="container">
-        <h2 className="current">Current</h2>
-        <div className="current-body">
-            <span className="current-title">Item 1</span>
-            <div className="current-description">
-                Description
-            </div>
-        </div>
-    </div>
-);
+class Current extends React.Component{
+
+
+
+    render(props){
+        
+        
+
+        const curr = this.props.current;
+        const items = []
+
+        // console.log(curr);
+        for (const [index, value] of curr.entries()){
+            // var i = curr.indexOf()
+            items.push(<li key={index}>
+                 {value} <br/>
+                 
+                 <button onClick={moveToDone}  ><FontAwesomeIcon icon={faCheckCircle} /></button>
+                 <button><FontAwesomeIcon icon={faTrash} /></button></li>)
+                
+                
+    }
+    return(
+
+    )
+    }
+
+};
 
 
 export default Current;

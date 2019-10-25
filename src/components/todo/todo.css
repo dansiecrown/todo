@@ -1,0 +1,32 @@
+.todo{
+    height: 40px;
+    box-shadow: 0px 5px 5px darkslategrey;
+}
+
+.todo-body{
+    height: 420px;
+    overflow: auto;
+}
+ul {
+    padding-left: 0px;
+    align-content: center;
+}
+
+li{
+    list-style: none;
+    
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    position: center;
+    text-align: center;
+    background-color: #eae8ea;
+    transition: transform .5s;
+    border-radius: 9px;
+
+}
+li:hover{
+    transform: scale(1.02);
+    border: 1px solid grey ;
+}
