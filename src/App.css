@@ -1,6 +1,6 @@
 hr {
   height: 20px;
-  background-color: transparent;
+  background-color: inherit;
   border: none;
 }
 .App {
@@ -19,15 +19,18 @@ hr {
   font-size: 23px;
   font-family: 'Grenze', serif;
   margin-top: 20px;
+
 }
 
 .item-enter{
   font-size: 18px;
   font-family: 'Grenze', serif;
+  font-style: italic;
   text-align: center;
   width: 6%;
   height: 30px;
   background-color: #282c34;
+  color: white;
   outline: none;
   background-color: transparent;
   border-style: solid;
@@ -36,6 +39,23 @@ hr {
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
+.input .input-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: small;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.input:hover .input-text{
+  visibility: visible;
+}
+
 .item-enter:focus{
   width: 80%;
 }
@@ -45,16 +65,100 @@ hr {
 }
 
 .App {
-  background-color: #282c34;
   min-height: 100vh;
-  
   flex-direction: column;
-  align-items: center;
-  
-  
+  align-items: center;  
   color: white;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.myb{
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 40px;
+  width: 100px;
+  float: left;
+  background: transparent;
+  color: white;
+  outline: none;
+  border: 2px solid white;
+  box-shadow: 2px 5px 2px slategray;
+}
+
+.myb:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+  
+}
+
+.myb .mybtext{
+  visibility: hidden;
+  width: 120px;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.myb:hover .mybtext {
+  visibility: visible;
+ 
+}
+
+
+.first{
+  background: #C04848;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.second{
+  background: #5f2c82;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.third{
+  background: #EC6F66;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F3A183, #EC6F66);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F3A183, #EC6F66); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.fourth{
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.fifth{
+  background: #DAE2F8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.sixth{
+  background: #ED4264;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.seventh{
+  background: #24C6DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.undefined{
+  background: #1A2980;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }

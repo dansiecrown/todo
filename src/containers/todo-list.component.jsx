@@ -40,32 +40,33 @@ constructor(props){
             if(val ===  ""){
                 alert("Please write an Item")
             }else{
-                this.setState({todo: [val, ...this.state.todo]})
-                e.target.value = null
+                this.setState({todo: [...this.state.todo, val]})
+                e.target.value = null;
+                localStorage.setItem('todo', JSON.stringify(this.state.todo))
             }
-        }
-        
+        }   
     }
 
- 
     //DELETE FUNCTIONS FOR THE THREE DIFFERENT SECTIONS   
 
     delete = (index) => {
         const todo = this.state.todo;
         // const sItem = curr.splice(index, index + 1);
-        todo.splice(index, index + 1)  
+        todo.splice(index, 1)  
         this.setState({})    
         }
+
     cDelete = (index) => {
         const todo = this.state.current;
         // const sItem = curr.splice(index, index + 1);
-        todo.splice(index, index + 1)  
+        todo.splice(index, 1)  
         this.setState({})    
         }
+
     dDelete = (index) => {
         const todo = this.state.done;
         // const sItem = curr.splice(index, index + 1);
-        todo.splice(index, index + 1)  
+        todo.splice(index, 1)  
         this.setState({})    
         }
 
@@ -74,7 +75,8 @@ constructor(props){
     tMoveToCurrent = (index) => {
         const todo = this.state.todo;
         const curr = this.state.current;
-        const copy = todo.splice(index, index + 1);
+        const copy = todo.splice(index, 1);
+        // console.log(copy)
         var copied = copy[0]
 
         alert("You Item has been moved to your CURRENT list")
@@ -87,7 +89,7 @@ constructor(props){
         
         const done = this.state.done;
         const curr = this.state.current;
-        const copy = done.splice(index, index + 1);
+        const copy = done.splice(index, 1);
         var copied = copy[0]
 
         alert("You Item has been moved to your CURRENT list")
@@ -101,7 +103,7 @@ constructor(props){
             
         const done = this.state.done;
         const curr = this.state.current;
-        const copy = curr.splice(index, index + 1);
+        const copy = curr.splice(index, 1);
         var copied = copy[0]
 
         alert("You Item has been moved to your DONE list")
@@ -153,6 +155,7 @@ constructor(props){
                     Input a TODO Item to add to your list and then press Enter to include description.</span>
                     
                     <input type="text" name="item" className="item-enter" placeholder="Your TODO" onKeyDown={this.enterKey}/>
+                    <span className='input-text'>Click here to Enter a Todo Item, and then press enter to add to the TOdo list</span>
                 </div>
                 <div className="todo-list">
                          <div className="container">
@@ -184,10 +187,6 @@ constructor(props){
                         
                     </div>
                 </div>
-                
-
-                
-
             </div>
             </div>
             ) 
